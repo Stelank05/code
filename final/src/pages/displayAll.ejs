@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<h1>This just outputs everything in the database</h1>
+
+<% for (var i = 0; i < allData.length; i++) { %>
+    <% for (var j = 0; j < allData[i].length; j++) { %>
+        <p><%=allData[i][j]%></p>
+    <% } %>
+<% } %>
+
+</html>

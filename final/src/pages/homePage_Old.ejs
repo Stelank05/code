@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- File References -->
+    <link rel="stylesheet" type="text/css" href="/public/design/designHome.css">
+</head>
+
+<body class="window_body"></body>
+
+<title>BS2205 - Project</title>
+<title><%=title%></title>
+
+<h1>Motorsports in 2024!</h1>
+
+<!-- Sections -->
+<!-- Formula 1 -->
+<div class="body_generic body_f1">
+    <p><%=series[0].seriesName%></p>
+    <p><%=series[0].seriesDescription%></p>
+    <div class="photoreel">
+        <img src = "<%=series[0].images[0].imageSource%>" alt = "<%=series[0].images[0].altText%>" class = "image_size">
+        <img src = "<%=series[0].images[1].imageSource%>" alt = "<%=series[0].images[1].altText%>" class = "image_size">
+        <img src = "<%=series[0].images[2].imageSource%>" alt = "<%=series[0].images[2].altText%>" class = "image_size">
+    </div>
+    <!-- Add Collection of Images (2-3)-->
+    <br><button class="button_generic button_f1" onclick="location.href='<%=series[0].seriesLink%>'">View</button>
+</div>
+<!-- WEC -->
+<div class="body_generic body_wec">
+    <p><%=series[1].seriesName%></p>
+    <p><%=series[1].seriesDescription%></p>
+    <div class="photoreel">
+        <img src = "<%=series[1].images[0].imageSource%>" alt = "<%=series[1].images[0].altText%>" class = "image_size">
+        <img src = "<%=series[1].images[1].imageSource%>" alt = "<%=series[1].images[1].altText%>" class = "image_size">
+        <img src = "<%=series[1].images[2].imageSource%>" alt = "<%=series[1].images[2].altText%>" class = "image_size">
+    </div>
+    <!-- Add Collection of Images (2-3)-->
+    <br><button class="button_generic button_wec" onclick="location.href='<%=series[1].seriesLink%>'">View</button>
+</div>
+<!-- IMSA -->
+<div class="body_generic body_imsa">
+    <p><%=series[2].seriesName%></p>
+    <p><%=series[2].seriesDescription%></p>
+    <div class="photoreel">
+        <img src = "<%=series[2].images[0].imageSource%>" alt = "<%=series[2].images[0].altText%>" class = "image_size">
+        <img src = "<%=series[2].images[1].imageSource%>" alt = "<%=series[2].images[1].altText%>" class = "image_size">
+        <img src = "<%=series[2].images[2].imageSource%>" alt = "<%=series[2].images[2].altText%>" class = "image_size">
+    </div>
+    <!-- Add Collection of Images (2-3)-->
+    <br><button class="button_generic button_imsa" onclick="location.href='<%=series[2].seriesLink%>'">View</button>
+</div>
+
+</html>

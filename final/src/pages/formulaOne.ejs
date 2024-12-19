@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- File References -->
+    <link rel="stylesheet" type="text/css" href="/public/design/designFormulaOne.css">
+</head>
+
+<body class="window_body">
+
+<title>BS2205 - Project</title>
+
+<h1 class="header title">Formula 1 in 2024!</h1>
+<h3 class="header description"><%=seriesData.seriesDescription%></h3>
+
+<button class="back_button" onclick="location.href='<%=homePath%>'">Back</button>
+
+<% for (var i = 0; i < teamData.length; i++) { %>
+<div class="body_generic <%=teamData[i].teamCode%>">
+    <p class="<%=teamData[i].teamCode%>_drivers team_header"><%=teamData[i].teamName%></p>
+
+    <p><%=teamData[i].nationalityLong%></p>
+    <p>Points Scored: <%=teamData[i].pointsScored%></p>
+    <p>Championship Position: <%=teamData[i].championshipPosition%></p>
+    <div class="gpResults">
+        <p>Grand Prix Wins: <%=teamData[i].gpWins%></p>
+        <p>Grand Prix Podiums: <%=teamData[i].gpPodiums%></p>
+        <p>Grand Prix Poles: <%=teamData[i].gpPoles%></p>
+    </div>
+    <div class="sprintResults">
+        <p>Sprint Wins: <%=teamData[i].sprintWins%></p>
+        <p>Sprint Podiums: <%=teamData[i].sprintPodiums%></p>
+        <p>Sprint Poles: <%=teamData[i].sprintPoles%></p>
+    </div>
+
+    <p class="<%=teamData[i].teamCode%>_drivers driver_header">Drivers</p>
+    <%for (var j = 0; j < driverList[i].length; j++) {%>
+        <div class="body_generic display_drivers <%=teamData[i].teamCode%>_drivers">
+            <p class="<%=teamData[i].teamCode%>_drivers title"><%=driverList[i][j].driverName%></p>
+            <p class="<%=teamData[i].teamCode%>_drivers description"><%=driverList[i][j].nationalityLong%></p>
+            <p class="<%=teamData[i].teamCode%>_drivers description">Car Number: <%=driverList[i][j].carNumber%></p>
+            <p class="<%=teamData[i].teamCode%>_drivers description">Points Scored: <%=driverList[i][j].pointsScored%></p>
+            <p class="<%=teamData[i].teamCode%>_drivers description">Championship Position: <%=driverList[i][j].championshipPosition%></p>
+            <div class="gpResults">
+                <p class="<%=teamData[i].teamCode%>_drivers description">Grand Prix Wins: <%=driverList[i][j].gpWins%></p>
+                <p class="<%=teamData[i].teamCode%>_drivers description">Grand Prix Podiums: <%=driverList[i][j].gpPodiums%></p>
+                <p class="<%=teamData[i].teamCode%>_drivers description">Grand Prix Poles: <%=driverList[i][j].gpPoles%></p>
+            </div>
+            <div class="sprintResults">
+                <p class="<%=teamData[i].teamCode%>_drivers description">Sprint Wins: <%=driverList[i][j].sprintWins%></p>
+                <p class="<%=teamData[i].teamCode%>_drivers description">Sprint Podiums: <%=driverList[i][j].sprintPodiums%></p>
+                <p class="<%=teamData[i].teamCode%>_drivers description">Sprint Poles: <%=driverList[i][j].sprintPoles%></p>
+            </div>
+        </div>
+    <%}%>
+</div>
+<% } %>
+</body>
+</html>

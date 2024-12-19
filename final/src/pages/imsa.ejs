@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- File References -->
+    <link rel="stylesheet" type="text/css" href="/public/design/designSportsCars.css">
+</head>
+
+<body class="window_body"></body>
+
+<title>BS2205 - Project</title>
+
+<h1>Car Models in the IMSA WeatherTech Sportscar Championship in 2024</h1>
+
+<button class="back_button" onclick="location.href='<%=homePath%>'">Back</button>
+
+<% for (var i = 0; i < models.length; i++) { %>
+    <div class="section_generic <%=models[i].platform.toLowerCase()%>">
+        <p class="model_name"><%=models[i].modelName%></p>
+        <p class="<%=models[i].platform.toLowerCase()%>">Platform: <%=models[i].platform%></p>
+        <p>Global Debut: <%=models[i].debutRace%></p>
+        <div class="team_div">
+            <p class="teams_header">Teams (Across All Series):</p>
+            <% for (var j = 0; j < models[i].teams.length; j++) {%>
+                <p class="team_line"><%=models[i].teams[j]%></p>
+            <% } %>
+    </div>
+        <p>Notes / Description: <%=models[i].notes%></p>
+    </div>
+<% } %>
+
+</html>

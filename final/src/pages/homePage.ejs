@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- File References -->
+    <link rel="stylesheet" type="text/css" href="/public/design/designHome.css">
+    <link rel="manifest" rel="motorsports.webmanifest">
+</head>
+
+<body class="window_body"></body>
+
+<title>BS2205 - Project</title>
+
+<h1 class="header">Motorsports in 2024!</h1>
+
+<!-- Sections -->
+
+<% for (var i = 0; i < homePageData.length; i++) { %>
+<div class="body_generic <%=homePageData[i].bodyStyle%>">
+    <p><%=homePageData[i].seriesName%></p>
+    <p><%=homePageData[i].seriesDescription%></p>
+    <div class="photoreel">
+        <img src="<%=passImages[i][0].imageSource%>" alt="<%=passImages[i][0].altText%>" title="<%=passImages[i][0].altText%>" class="image_size">
+        <img src="<%=passImages[i][1].imageSource%>" alt="<%=passImages[i][1].altText%>" title="<%=passImages[i][1].altText%>" class="image_size">
+        <img src="<%=passImages[i][2].imageSource%>" alt="<%=passImages[i][2].altText%>" title="<%=passImages[i][2].altText%>" class="image_size">
+    </div>
+    <!-- Add Collection of Images (2-3)-->
+    <br><button class="button_generic <%=homePageData[i].buttonStyle%>" onclick="location.href='<%=homePageData[i].seriesLink%>'">View</button>
+</div>
+<% } %>
+
+</html>

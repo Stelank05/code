@@ -1,0 +1,130 @@
+/* General CSS Data */
+.window_body {
+    background-color: #FFFFFF;
+    color: #102D5C;
+    
+    text-align: center;
+}
+
+.header {
+    background-color: #c0c0c0;
+
+    width: 30%;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    margin-left: 35%;
+    margin-right: 35%;
+
+    border-radius: 10px;
+}
+
+.body_generic {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    
+    text-align: center;
+
+    padding: 10px;
+    padding-top: 2px;
+    margin: 10px;
+
+    border-radius: 10px;
+}
+
+.button_generic {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    
+    text-align: center;
+
+    height: 48px;
+    width: 100%;
+
+    border-width: 0px;
+    border-radius: 10px;
+}
+
+.photoreel {
+    display: grid;
+    grid-template-areas:
+    'image1 image1 image2 image2 image3 image3';
+    padding: 5px;
+    align-items: center;
+}
+
+@media (-webkit-device-pixel-ratio: 3) {
+    .header {
+        font-size: 38px;
+        width: 50%;
+        margin-left: 25%;
+    }
+    .body_generic {
+        font-size: 32px;
+    }
+    .button_generic {
+        font-size: 34px;
+        margin-top: 30px;
+    }
+    .photoreel {
+        grid-template-areas:
+        'image1'
+        'image2'
+        'image3';
+    }   
+}
+
+@media (max-width: 980px) {
+    .body_generic {
+        font-size: 16px;
+    }
+    .button_generic {
+        font-size: 30px;
+        margin-top: 30px;
+    }
+    .photoreel {
+        grid-template-areas:
+        'image1'
+        'image2'
+        'image3';
+    }
+}
+
+.image_size {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Formula 1 CSS Data */
+.body_f1 {
+    background-color: #D3D3D3;
+    color: #FF0000;
+}
+
+.button_f1 {
+    background-color: #D3D3D3;
+    color: #FF0000;
+}
+
+/* WEC CSS Data */
+.body_wec {
+    background-color: #0000FF;
+    color: #FFFFFF;
+}
+
+.button_wec {
+    background-color: #0000FF;
+    color: #FFFFFF;
+}
+
+/* IMSA CSS Data */
+.body_imsa {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.button_imsa {
+    background-color: #000000;
+    color: #FFFFFF;
+}
