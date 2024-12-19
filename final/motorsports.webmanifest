@@ -1,0 +1,16 @@
+{
+    "name": "Motorsports in 2024",
+    "short_name": "Motorsports in 2024",
+    "description": "An App that talks about Formula 1 and Sportscars in 2024.",
+    "icons": [
+        {
+            "src": "public/images/sportsCarModels/js-p217-6.jpg",
+            "sizes": "32x32",
+            "type": "image/jpg"
+        }
+    ],
+    "start_url": "/home",
+    "display": "fullscreen",
+    "theme_color": "#B12A34",
+    "background_color": "#B12A34"
+}
